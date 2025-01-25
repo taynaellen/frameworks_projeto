@@ -9,7 +9,7 @@ import re
 import PyPDF2
 import cv2
 
-genai.configure(api_key="AIzaSyAEYr9MEJ4aCLw6z_s9XHEUvtTmLnzLx3M")
+genai.configure(api_key="insira key")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 app = Flask(__name__, static_folder='static')
