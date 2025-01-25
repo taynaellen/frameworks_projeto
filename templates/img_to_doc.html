@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem para doc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/048f53145f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ul>
+                <img src="https://cdn-icons-png.flaticon.com/512/1322/1322164.png" width="60" height="60" class="converter" alt="">
+                <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/img_to_doc"><i class="fa-solid fa-image"></i> Imagem para Doc</a></li>
+                <li><a href="/pdf_to_doc"><i class="fa-solid fa-file-pdf"></i> PDF para Doc</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <div class="main-top">
+                <h1>Imagem para Doc</h1>
+                <p>Converta sua imagem com texto para um arquivo .docx editável!</p>
+            </div>
+
+            <div class="main-box">
+                <form action="/upload_image" method="POST" enctype="multipart/form-data">
+                    <label for="image" class="file-label">Selecione o arquivo de imagem:</label>
+                    <input type="file" name="file" accept="image/*" required> <br><br>
+                    <button type="submit">Converter</button>
+                </form>
+            </div>
+
+            <!-- {% if document_url %}
+                <div class="success-message">
+                    <h2>Seu documento foi gerado com sucesso!</h2>
+                    <a id="download" href="{{ document_url }}" download="document.docx">Clique aqui para baixar<i class="fa-solid fa-download"></i></a>
+                </div>
+            {% endif %} -->
+        </main>
+        <footer>
+            <p>Projeto desenvolvido para Unidade Curricular de Frameworks para Desenvolvimento Web.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg/200px-Instituto_Federal_de_Mato_Grosso_do_Sul_-_Marca_Vertical_2015.svg.png" width="100" alt="">
+        </footer>
+    </div>
+</body>
+</html>
